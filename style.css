@@ -1,3 +1,9 @@
+/* Variables */
+@import url("https://use.typekit.net/qtx4tzb.css");
+:root {
+  --font_primary: new-hero, sans-serif;
+}
+
 /* Global */
 * {
   box-sizing: border-box;
@@ -39,9 +45,7 @@ body,
 #app {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  font-family: var(--font_primary);
 }
 
 /*** Affiche list Block ***/
@@ -179,30 +183,60 @@ body,
   .gallery-list {
     overflow-x: initial;
   }
+  .gallery-list .gallery-item {
+    flex-shrink: 1;
+    flex-basis: content;
+  }
 }
-/* Histoire-item block */
-.histoire-item {
+/* Histoire-block */
+.histoire-block {
   display: flex;
-  column-gap: 26px;
+  column-gap: 59px;
+  margin-bottom: 66px;
 }
-.histoire-item .h-item-header h3 {
+.histoire-block .h-block-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 66px;
+  color: #071f5b;
+  position: relative;
+}
+.histoire-block .h-block-header::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  background-color: #071f5b;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+.histoire-block .h-block-header h3 {
   font-weight: 600;
   font-size: 70px;
-  line-height: 95px;
-  transform: rotate(-90deg);
+  writing-mode: sideways-lr;
+  position: relative;
+  padding-top: 72px;
+  max-width: 55px;
 }
-.histoire-item .h-item-main .h-item-title {
+.histoire-block .h-block-main .h-block-title {
+  color: #071f5b;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 44px;
 }
-.histoire-item .h-item-main .h-item-content {
+.histoire-block .h-block-main .h-block-content {
   display: flex;
   column-gap: 65px;
   margin-bottom: 82px;
 }
-.histoire-item .h-item-main .h-item-content p {
+.histoire-block .h-block-main .h-block-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   max-width: 567px;
 }
 
@@ -211,6 +245,7 @@ body,
   display: grid;
   grid-template-columns: min(90vw, 1320px);
   justify-content: center;
+  padding-block: 100px;
 }
 
 /* Pages */

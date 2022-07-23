@@ -1,3 +1,11 @@
+/* Variables */
+
+@import url("https://use.typekit.net/qtx4tzb.css");
+
+:root {
+  --font_primary: new-hero, sans-serif;
+}
+
 /* Global */
 
 * {
@@ -40,7 +48,5 @@ body,
 #app {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  font-family: var(--font_primary);
 }
