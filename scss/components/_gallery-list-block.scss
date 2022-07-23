@@ -8,7 +8,7 @@
 
   .gallery-item {
     flex-shrink: 0;
-    flex-basis: 350px;
+    flex-basis: 360px;
 
     .gallery-image {
       position: relative;
@@ -39,8 +39,8 @@
     overflow-x: initial;
 
     .gallery-item {
-      flex-shrink: 1;
       flex-basis: content;
+      flex-shrink: 1;
     }
   }
 }
