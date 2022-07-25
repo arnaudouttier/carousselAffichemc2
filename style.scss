@@ -1,7 +1,11 @@
-@use "scss/global";
-@use "scss/affiche-list-block";
+/* Base */
+@use "scss/base/global";
+
+/* Components */
+@use "scss/components/affiche-list-block";
 @use "scss/components/gallery-list-block";
 @use "scss/components/histoire-block";
+@use "scss/components/agenda-block";
 
 /* Pages */
 
